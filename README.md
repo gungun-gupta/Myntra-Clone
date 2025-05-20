@@ -13,8 +13,7 @@ I have recreated this project from the ground up, paying close attention to even
 
 ## 📸 Screenshots
 Home:
-![Uploading Screenshot (91).png…]()
-
+![Screenshot (91)](https://github.com/user-attachments/assets/4a1274f4-5ec5-47c0-8167-bd8bc137b48f)
 ![Screenshot (92)](https://github.com/user-attachments/assets/0941c475-3e75-421e-953e-da05d05dad34)
 ![Screenshot (93)](https://github.com/user-attachments/assets/c9754db4-252e-4b7a-b56a-ca414cc0e18b)
 ![Screenshot (94)](https://github.com/user-attachments/assets/2764eb0d-de2f-4cca-9141-4d6165e45133)
