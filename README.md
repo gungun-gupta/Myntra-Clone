@@ -7,7 +7,7 @@ I have recreated this project from the ground up, paying close attention to even
 
 ## 🚀 Live Demo
 
-🌐 [Click here to view the live site](https://your-username.github.io/myntra-clone)  
+🌐 [Click here to view the live site](https://gungun-gupta.github.io/myntra-clone/))  
 
 ---
 
