@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bag - Myntra Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+      color: #333;
+    }
+
+    header {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #ff3f6c;
+    }
+
+    .bag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .bag-items {
+      flex: 2 1 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      min-height: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .empty-bag-msg {
+      font-size: 1.2rem;
+      color: #888;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .bag-summary {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      height: fit-content;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 20px;
+    }
+
+    .bag-summary h2 {
+      margin-bottom: 20px;
+      color: #ff3f6c;
+    }
+
+    .bag-summary p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .bag-summary p strong {
+      font-size: 1.3rem;
+    }
+
+    #checkout-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #ff3f6c;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #checkout-btn:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+      .bag-container {
+        flex-direction: column;
+      }
+
+      .bag-summary {
+        position: static;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Bag</h1>
+  </header>
+
+  <main class="bag-container">
+
+    <section class="bag-items">
+      <!-- Bag items will be dynamically inserted here -->
+      <p class="empty-bag-msg">Your bag is empty.</p>
+    </section>
+
+    <aside class="bag-summary">
+      <h2>Order Summary</h2>
+      <p>Subtotal: ₹<span id="subtotal">0</span></p>
+      <p>Tax (10%): ₹<span id="tax">0</span></p>
+      <p><strong>Total: ₹<span id="total">0</span></strong></p>
+      <button id="checkout-btn" disabled>Checkout</button>
+    </aside>
+
+  </main>
+
+  <script src="bag.js"></script>
+</body>
+</html>

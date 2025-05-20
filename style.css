@@ -1,0 +1,300 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding-top: 90px; /* Adjust this to match your navbar height */
+}
+
+/* Header */
+.navbar-brand img {
+  height: 40px;
+}
+
+/* Mega Menu Dropdown */
+.navbar .dropdown-menu.mega-menu {
+  width: 100%;
+  left: 0;
+  top: 100%;
+  display: none;
+  border-radius: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.navbar .nav-item:hover .mega-menu {
+  display: block;
+}
+
+/* Pink underline effect */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ff3e6c;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff3e6c;
+}
+
+
+.dropdown-item {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #696b79;
+}
+
+.dropdown-item:hover {
+  color: #ff3e6c;
+}
+  
+.search-input {
+  width: 100%;
+  max-width: 400px;
+}
+
+.icons i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .icons i {
+    margin: 0 5px;
+    font-size: 18px;
+  }
+}
+
+/* Carousel */
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  padding-bottom: 30px; /* space for dots */
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+
+.section-heading {
+  font-family: 'Playfair Display', Poppins; /* You can change to any font */
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+/* Square Card */
+.square-card {
+  position: relative;
+  width: 100%;
+  padding-top: 130%; /* Maintain aspect ratio */
+  overflow: hidden;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.square-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.square-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+    border-radius: 0;
+  transition: transform 0.3s ease;
+  z-index: 1; /* Behind card-body */
+}
+
+/* Image Hover Zoom */
+.square-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Body Overlay */
+.square-card .card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  z-index: 2; /* On top of image */
+}
+
+/* Card Title */
+.square-card .card-title {
+  font-weight: bold;
+}
+
+/* On Hover, make text background more opaque */
+.square-card:hover .card-body {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+
+/* Remove gutter spacing */
+.row.g-2 {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-2-4 {
+    flex: 0 0 auto;
+    width: 20%; /* 100 / 5 */
+  }
+}
+
+/* Product Card (specific styling) */
+.product-card {
+  margin-bottom: 30px;
+}
+.card-body {
+  text-align: left;
+}
+.card {
+  position: relative;
+}
+
+.card-img-top {
+  height: 300px; /* or 280px depending on what fits best */
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  border-radius: 0;
+}
+.brand-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+.product-name {
+  font-size: 13px;
+  color: #555;
+}
+.rating {
+  color: green;
+  font-size: 13px;
+}
+.price {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.original-price {
+  text-decoration: line-through;
+  color: grey;
+}
+.discount {
+  color: red;
+  font-size: 13px;
+}
+.wishlist-icon i {
+  font-size: 1.5rem;
+  color: #ff3e6c;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-icon i:hover {
+  transform: scale(1.2);
+}
+ /* shop by category */
+ .category-card {
+  height: 320px; /* or whatever looks good for your layout */
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.category-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 5px;
+  background: linear-gradient(to top, rgba(255, 102, 0, 0.9), rgba(255, 102, 0, 0.6));
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.category-overlay h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.category-overlay p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  color: #696b79;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #696b79;
+}
+
+.footer a:hover {
+  color: #ff3e6c;
+}
+
+.footer p {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #696b79;
+}
+
+.footer i {
+  color: #696b79;
+  cursor: pointer;
+}
+
+.footer strong {
+  color: #282c3f;
+}

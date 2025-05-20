@@ -1,0 +1,28 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+input:focus, .btn:focus {
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #ff3e6c;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e7335f;
+}
+
+.toggle-password {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

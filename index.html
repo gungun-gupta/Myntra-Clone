@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png"
+    href="data:image/png;base64,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"
+    sizes="64x64" />
+  <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- Header/Navbar -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3" fixed-top> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top">
+
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png" alt="Myntra">
+      </a>
+
+      <!-- Toggler Button for Small Screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Navbar Content -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+        <!-- Menu Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link" href="#" id="menDropdown" role="button">
+              Men
+            </a>
+            <div class="dropdown-menu mega-menu shadow border-0 p-4 mt-0" aria-labelledby="menDropdown">
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Topwear</h6>
+                    <a href="#" class="dropdown-item">T-Shirts</a>
+                    <a href="#" class="dropdown-item">Casual Shirts</a>
+                    <a href="#" class="dropdown-item">Formal Shirts</a>
+                    <a href="#" class="dropdown-item">Sweatshirts</a>
+                    <a href="#" class="dropdown-item">Jackets</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Bottomwear</h6>
+                    <a href="#" class="dropdown-item">Jeans</a>
+                    <a href="#" class="dropdown-item">Casual Trousers</a>
+                    <a href="#" class="dropdown-item">Shorts</a>
+                    <a href="#" class="dropdown-item">Track Pants</a>
+                  </div>
+
+                  <!-- Add more columns as needed -->
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link" href="#" id="menDropdown" role="button">
+              Women
+            </a>
+            <div class="dropdown-menu mega-menu shadow border-0 p-4 mt-0" aria-labelledby="menDropdown">
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Topwear</h6>
+                    <a href="#" class="dropdown-item">T-Shirts</a>
+                    <a href="#" class="dropdown-item">Casual Shirts</a>
+                    <a href="#" class="dropdown-item">Formal Shirts</a>
+                    <a href="#" class="dropdown-item">Sweatshirts</a>
+                    <a href="#" class="dropdown-item">Jackets</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Bottomwear</h6>
+                    <a href="#" class="dropdown-item">Jeans</a>
+                    <a href="#" class="dropdown-item">Casual Trousers</a>
+                    <a href="#" class="dropdown-item">Shorts</a>
+                    <a href="#" class="dropdown-item">Track Pants</a>
+                  </div>
+
+                  <!-- Add more columns as needed -->
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link" href="#" id="menDropdown" role="button">
+              Kids
+            </a>
+            <div class="dropdown-menu mega-menu shadow border-0 p-4 mt-0" aria-labelledby="menDropdown">
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Topwear</h6>
+                    <a href="#" class="dropdown-item">T-Shirts</a>
+                    <a href="#" class="dropdown-item">Casual Shirts</a>
+                    <a href="#" class="dropdown-item">Formal Shirts</a>
+                    <a href="#" class="dropdown-item">Sweatshirts</a>
+                    <a href="#" class="dropdown-item">Jackets</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Bottomwear</h6>
+                    <a href="#" class="dropdown-item">Jeans</a>
+                    <a href="#" class="dropdown-item">Casual Trousers</a>
+                    <a href="#" class="dropdown-item">Shorts</a>
+                    <a href="#" class="dropdown-item">Track Pants</a>
+                  </div>
+
+                  <!-- Add more columns as needed -->
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link" href="#" id="menDropdown" role="button">
+              Home and Living
+            </a>
+            <div class="dropdown-menu mega-menu shadow border-0 p-4 mt-0" aria-labelledby="menDropdown">
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Topwear</h6>
+                    <a href="#" class="dropdown-item">T-Shirts</a>
+                    <a href="#" class="dropdown-item">Casual Shirts</a>
+                    <a href="#" class="dropdown-item">Formal Shirts</a>
+                    <a href="#" class="dropdown-item">Sweatshirts</a>
+                    <a href="#" class="dropdown-item">Jackets</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Bottomwear</h6>
+                    <a href="#" class="dropdown-item">Jeans</a>
+                    <a href="#" class="dropdown-item">Casual Trousers</a>
+                    <a href="#" class="dropdown-item">Shorts</a>
+                    <a href="#" class="dropdown-item">Track Pants</a>
+                  </div>
+
+                  <!-- Add more columns as needed -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link" href="#" id="menDropdown" role="button">
+              Beauty
+            </a>
+            <div class="dropdown-menu mega-menu shadow border-0 p-4 mt-0" aria-labelledby="menDropdown">
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Makeup</h6>
+                    <a href="#" class="dropdown-item">Lipstick</a>
+                    <a href="#" class="dropdown-item">Eyeliner</a>
+                    <a href="#" class="dropdown-item">Compact Power</a>
+                    <a href="#" class="dropdown-item">Primer</a>
+                    <a href="#" class="dropdown-item">Makeup pallets</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-lg-2">
+                    <h6 class="fw-bold text-uppercase mb-3">Skin Care</h6>
+                    <a href="#" class="dropdown-item">Serums</a>
+                    <a href="#" class="dropdown-item">Moisturizer</a>
+                    <a href="#" class="dropdown-item">Night Cream</a>
+                    <a href="#" class="dropdown-item">Sunscreen</a>
+                  </div>
+
+                  <!-- Add more columns as needed -->
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Search + Icons -->
+        <div class="d-flex align-items-center flex-grow-1 justify-content-end gap-3 mt-3 mt-lg-0 flex-wrap">
+          <form class="d-flex" style="flex-grow: 1; max-width: 400px;">
+            <input class="form-control search-input" type="search" placeholder="Search for products..." />
+          </form>
+          <div class="icons d-flex align-items-center gap-4">
+            <!-- Profile -->
+            <div class="text-center position-relative">
+              <a href="user.html" class="text-decoration-none text-dark">
+                <i class="fas fa-user"></i><br />
+                <span style="font-size: 12px;">Profile</span>
+              </a>
+            </div>
+            <!-- Wishlist with count -->
+            <div class="text-center position-relative">
+              <a href="wishlist.html" class="text-decoration-none text-dark">
+                <i class="fas fa-heart"></i>
+                <span id="wishlist-count"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span><br />
+                <span style="font-size: 12px;">Wishlist</span>
+              </a>
+            </div>
+            <!-- Bag -->
+            <div class="text-center position-relative">
+              <a href="Bag.html" class="text-decoration-none text-dark">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="bag-count"
+                  class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">0</span>
+                <br />
+                <span style="font-size: 12px;">Cart</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </nav>
+
+
+  <!-- Carousel: Autoplay, No Arrows, No Dots -->
+  <div id="myntraCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/000.jpg" class="d-block w-100" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img src="images/999.jpg" class="d-block w-100" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="images/888.jpg" class="d-block w-100" alt="Third slide">
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel of multiple cards Section -->
+  <div class="container-fluid mt-5">
+    <h4 class="mb-5 fw-bold text-uppercase section-heading">Grand Global Brands</h4>
+
+    <div id="brandCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-0">
+            <!-- 6 cards in slide -->
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/c1.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/c2.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/p8.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/p9.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/p6.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-0">
+            <!-- Repeat with new images if you want -->
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/c3.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+            <!-- Repeat other 5 cards like above -->
+            <!-- ... -->
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="#" class="card square-card text-decoration-none text-dark">
+                <img src="images/c6.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">New Arrival</div>
+                  <div class="card-text">FLAT 50% OFF</div>
+                </div> -->
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/Cshoes.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/p7.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-2-4 col-lg-2 mb-3">
+              <a href="https://your-link.com" class="card square-card text-decoration-none text-dark">
+                <img src="images/p6.jpg" class="card-img-top" alt="..." />
+                <!-- <div class="card-body">
+                  <div class="card-title">Hottest Pairs</div>
+                  <div class="card-text">MIN. 30% OFF</div>
+                </div> -->
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel indicators with margin -->
+      <div class="carousel-indicators mt-12 justify-content-center">
+        <button type="button" data-bs-target="#brandCarousel" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#brandCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Section -->
+  <section class="product-section">
+    <div class="container">
+      <!-- Heading Section -->
+      <div class="section-header text-center mb-4">
+        <h2 class="section-title">Women's Collection</h2>
+        <p class="section-tagline">Discover the latest styles, handpicked just for you</p>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="row" id="product-list">
+        <!-- Product Cards Will Go Here -->
+        <div class="col-md-3 col-sm-6 product-card">
+          <div class="card">
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon position-absolute top-0 end-0 m-2">
+              <i class="bi bi-heart wishlist-btn" data-id="1"></i>
+            </div>
+            <img src="images/maxi dress.jpg" class="card-img-top" alt="Floral Dress">
+            <div class="card-body">
+              <h6 class="brand-name">STYLUM</h6>
+              <p class="product-name">Floral Print Fit & Flare Maxi Dress</p>
+              <p class="rating">⭐ 4.2 | 2.3k</p>
+              <p class="price">
+                ₹756 <span class="original-price">₹2999</span>
+                <span class="discount">(75% OFF)</span>
+              </p>
+              <button class="btn btn-primary add-to-cart" data-id="1" data-name="Maxi Dress" data-price="756">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 product-card">
+          <div class="card">
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon position-absolute top-0 end-0 m-2">
+              <i class="bi bi-heart wishlist-btn" data-id="2"></i>
+            </div>
+            <img src="images/p3.jpg" class="card-img-top" alt="Floral Dress">
+            <div class="card-body">
+              <h6 class="brand-name">H&M</h6>
+              <p class="product-name">Maxi Dress</p>
+              <p class="rating">⭐ 4.2 | 2.3k</p>
+              <p class="price">
+                ₹756 <span class="original-price">₹2999</span>
+                <span class="discount">(75% OFF)</span>
+              </p>
+              <button class="btn btn-primary add-to-cart" data-id="1" data-name="Maxi Dress" data-price="756">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 product-card">
+          <div class="card">
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon position-absolute top-0 end-0 m-2">
+              <i class="bi bi-heart wishlist-btn" data-id="3"></i>
+            </div>
+            <img src="images/p4.jpg" class="card-img-top" alt="Floral Dress">
+            <div class="card-body">
+              <h6 class="brand-name">Zara</h6>
+              <p class="product-name">Dress</p>
+              <p class="rating">⭐ 4.2 | 2.3k</p>
+              <p class="price">
+                ₹756 <span class="original-price">₹2999</span>
+                <span class="discount">(75% OFF)</span>
+              </p>
+              <button class="btn btn-primary add-to-cart" data-id="1" data-name="Maxi Dress" data-price="756">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 product-card">
+          <div class="card">
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon position-absolute top-0 end-0 m-2">
+              <i class="bi bi-heart wishlist-btn" data-id="4"></i>
+            </div>
+            <img src="images/p5.jpg" class="card-img-top" alt="Floral Dress">
+            <div class="card-body">
+              <h6 class="brand-name">Puma</h6>
+              <p class="product-name">Gym Wear</p>
+              <p class="rating">⭐ 4.2 | 2.3k</p>
+              <p class="price">
+                ₹756 <span class="original-price">₹2999</span>
+                <span class="discount">(75% OFF)</span>
+              </p>
+              <button class="btn btn-primary add-to-cart" data-id="1" data-name="Maxi Dress" data-price="756">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by Category sectiion -->
+<section class="container-fluid my-5">
+  <h4 class="fw-bold text-uppercase section-heading mb-4">Shop by Category</h4>
+  <div class="row g-3">
+    <!-- Card 1 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/ethnic wear.jpg" alt="Ethnic Wear" />
+        <div class="category-overlay">
+          <h6>Ethnic Wear</h6>
+          <p>50-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/casual wear.jpg" alt="Casual Wear" />
+        <div class="category-overlay">
+          <h6>Casual Wear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/active wear woman0.jpeg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Active Wear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/western.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Western Wear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/laungewear.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Laungewear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 6 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/watch.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Watches</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 7 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/beauty and mackup.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Beauty and Makeup</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 8 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/shoes.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Footwear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 9 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/office wear.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Office Wear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 10 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/home and decore.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Home Decore</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 11 -->
+     <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/eyewear.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Eye Wear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 12 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/sleepwaer.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Sleep Wear</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 13 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/bags.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Bags and Bagpacks</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 14 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/watch.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Watches and Wearables</h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 15 -->
+    <div class="col-md-2 mb-4">
+      <div class="category-card">
+        <img src="images/headphones.jpg" alt="Active Wear" />
+        <div class="category-overlay">
+          <h6>Headphones and wearables<h6>
+          <p>40-80% OFF</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer mt-5 pt-4 pb-4">
+    <div class="container-fluid px-4">
+      <div class="row gy-4">
+
+        <!-- Column 1 -->
+        <div class="col-12 col-md-3">
+          <h6 class="fw-bold">ONLINE SHOPPING</h6>
+          <a href="#">Men</a><br>
+          <a href="#">Women</a><br>
+          <a href="#">Kids</a><br>
+          <a href="#">Home</a><br>
+          <a href="#">Beauty</a><br>
+          <a href="#">Genz</a><br>
+          <a href="#">Gift Cards</a><br>
+          <a href="#">Myntra Insider</a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-3">
+          <h6 class="fw-bold">CUSTOMER POLICIES</h6>
+          <a href="#">Contact Us</a><br>
+          <a href="#">FAQ</a><br>
+          <a href="#">T&C</a><br>
+          <a href="#">Track Orders</a><br>
+          <a href="#">Shipping</a><br>
+          <a href="#">Cancellation</a><br>
+          <a href="#">Returns</a><br>
+          <a href="#">Privacy Policy</a><br>
+          <a href="#">Grievance Redressal</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-12 col-md-3">
+          <h6 class="fw-bold">EXPERIENCE MYNTRA APP ON MOBILE</h6>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="130">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Download_on_the_App_Store_Badge.svg"
+            width="130">
+          <div class="mt-3">
+            <h6 class="fw-bold">KEEP IN TOUCH</h6>
+            <i class="fab fa-facebook me-3"></i>
+            <i class="fab fa-twitter me-3"></i>
+            <i class="fab fa-youtube me-3"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="col-12 col-md-3">
+          <div class="mb-3 d-flex align-items-start">
+            <i class="fas fa-shield-alt fa-2x me-3 mt-1"></i>
+            <div>
+              <strong>100% ORIGINAL</strong><br>
+              guarantee for all products at myntra.com
+            </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <i class="fas fa-undo fa-2x me-3 mt-1"></i>
+            <div>
+              <strong>Return within 14 days</strong><br>
+              of receiving your order
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Useful Links -->
+      <hr class="my-4">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <h6 class="fw-bold">USEFUL LINKS</h6>
+          <a href="#">Blog</a> |
+          <a href="#">Careers</a> |
+          <a href="#">Site Map</a> |
+          <a href="#">Corporate Info</a> |
+          <a href="#">Whitehat</a> |
+          <a href="#">Cleartrip</a>
+        </div>
+      </div>
+
+      <!-- Popular Searches -->
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-12">
+          <p class="small text-muted">
+            <strong>POPULAR SEARCHES:</strong> Makeup | Dresses For Girls | T-Shirts | Sandals | Headphones | Handbags |
+            Bags | Puma Shoes | Smart Watches | Kurtis | Nike | Smart Watches | Titan Watches | Designer Blouse | Gowns
+            | Rings | Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion
+            Show | Lipstick | Saree | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit | Chinos | Shoes | Adidas
+            Shoes | Woodland Shoes | Jewellery | Designers Sarees
+          </p>
+        </div>
+      </div>
+
+      <hr class="my-3">
+      <div class="text-center text-muted small">
+        © 2025 <a href="https://www.myntra.com" class="text-muted text-decoration-none">www.myntra.com</a>. All rights
+        reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
